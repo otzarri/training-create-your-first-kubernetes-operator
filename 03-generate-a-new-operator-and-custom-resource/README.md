@@ -2,10 +2,9 @@
 
 Kubebuilder has generated a Golang application, but it is time to now build your business case in.
 
-In this challenge you will:
-
-- Be introduced to the example business case
-- Create a operator and custom resource (CRD) using Kubebuilder
+**In this challenge you will:**
+* Be introduced to the example business case
+* Create a operator and custom resource (CRD) using Kubebuilder
 
 
 ## ☑️ Dreaming of a better to-do app

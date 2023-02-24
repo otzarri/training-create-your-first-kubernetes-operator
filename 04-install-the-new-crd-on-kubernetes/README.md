@@ -2,11 +2,10 @@
 
 In the previous challenge you created a operator and resource definition (CRD). Now is your chance to explore the resource CRD!
 
-In this challenge you will:
-
-- Understand the Golang code representation of the CRD
-- Transform the code CRD into YAML and install it in Kubernetes
-- Install the CRD using the provided `make` command
+**In this challenge you will:**
+* Understand the Golang code representation of the CRD
+* Transform the code CRD into YAML and install it in Kubernetes
+* Install the CRD using the provided `make` command
 
 
 ## 🧬 Viewing the generated CRD code

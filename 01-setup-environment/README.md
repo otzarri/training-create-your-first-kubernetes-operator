@@ -2,10 +2,9 @@
 
 Before beginning this tutorial it is necessary that you have installed the tools that will be used.
 
-In this challenge you will:
-
-- Install the required tools
-- Create a local kubernetes cluster
+**In this challenge you will:**
+* Install the required tools
+* Create a local kubernetes cluster
 
 
 ## 🐿️ Install the Go language

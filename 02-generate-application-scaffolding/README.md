@@ -1,11 +1,11 @@
 # Generate application scaffolding
 
-Now that you prepared the environment, it is time to get started with kubebuilder.
+Now that you prepared the environment, it is time to get started with `kubebuilder`.
 
-In this challenge you will:
+**In this challenge you will:**
+* Initialize Kubebuilder
+* Run the generated operator application locally
 
-- Initialize Kubebuilder
-- Run the generated operator application locally
 
 ## 🚀 Get started
 

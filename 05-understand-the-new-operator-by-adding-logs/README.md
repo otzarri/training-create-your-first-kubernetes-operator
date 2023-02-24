@@ -2,13 +2,12 @@
 
 You explored the generated CRD, and added this custom `Website` type to your cluster.
 
-Now it is time to understand the generated operator. You will get to see your application respond to a request for a `Website` custom resource.
+Now it is time to understand the generated operator. You will get to see your application respond to a request for a Website custom resource.
 
-In this challenge you will:
-
-- Add logs in your operator application
-- Run the application locally
-- Request a `Website` custom resource and view the corresponding logs
+**In this challenge you will:**
+* Add logs in your operator application
+* Run the application locally
+* Request a Website custom resource and view the corresponding  logs
 
 
 ## 🕵️ Understanding your new operator
