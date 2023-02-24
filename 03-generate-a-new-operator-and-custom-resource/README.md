@@ -1,5 +1,13 @@
 # Generate a new operator and custom resource
 
+Kubebuilder has generated a Golang application, but it is time to now build your business case in.
+
+In this challenge you will:
+
+- Be introduced to the example business case
+- Create a operator and custom resource (CRD) using Kubebuilder
+
+
 ## ☑️ Dreaming of a better to-do app
 
 So you have a working Golang application. Now it is time to add some business logic to create a useful (albeit, simple) operator.

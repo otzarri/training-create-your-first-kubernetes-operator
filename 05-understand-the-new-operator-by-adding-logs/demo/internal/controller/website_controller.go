@@ -47,11 +47,24 @@ type WebsiteReconciler struct {
 // For more details, check Reconcile and its Result here:
 // - https://pkg.go.dev/sigs.k8s.io/controller-runtime@v0.14.1/pkg/reconcile
 func (r *WebsiteReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
-	_ = log.FromContext(ctx)
+  // _ indicates an unused variable in Golang.
+  // By naming the variable, you can use the pre-configured logging framework.
+  log := log.FromContext(ctx)
 
-	// TODO(user): your logic here
+  // Start by declaring the custom resource to be type "Website"
+  customResource := &kubeconv1beta1.Website{}
 
-	return ctrl.Result{}, nil
+  // Then retrieve from the cluster the resource that triggered this reconciliation.
+  // Store these contents into an object used throughout reconciliation.
+  err := r.Client.Get(context.Background(), req.NamespacedName, customResource)
+  // If the resource does not match a "Website" resource type, return failure.
+  if err != nil {
+    return ctrl.Result{}, err
+  }
+
+  log.Info(`Hello from your new website reconciler!`)
+
+  return ctrl.Result{}, nil
 }
 
 // SetupWithManager sets up the controller with the Manager.

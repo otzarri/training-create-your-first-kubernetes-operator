@@ -1,5 +1,14 @@
 # Install the new CRD on Kubernetes
 
+In the previous challenge you created a operator and resource definition (CRD). Now is your chance to explore the resource CRD!
+
+In this challenge you will:
+
+- Understand the Golang code representation of the CRD
+- Transform the code CRD into YAML and install it in Kubernetes
+- Install the CRD using the provided `make` command
+
+
 ## 🧬 Viewing the generated CRD code
 
 In the last step you selected to generate a custom Resource. This adds a Golang representation of a Custom Resource Definition (CRD) to your operator scaffolding code.
