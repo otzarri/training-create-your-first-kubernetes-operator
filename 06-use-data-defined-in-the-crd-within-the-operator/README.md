@@ -2,7 +2,7 @@
 
 You have seen how requesting a custom resource of type Website can trigger the operator reconcile function.
 
-Now it is time to customizes the Website CRD and use the custom data as a part of the CRD spec.
+Now it is time to customize the Website CRD and use the custom data as a part of the CRD spec.
 
 **In this challenge you will:**
 * Introduce a new CRD field
