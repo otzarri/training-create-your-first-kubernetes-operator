@@ -46,11 +46,4 @@ Chapters:
 
 
 <hr>
-<div style="font-weight: bold; ">
-  <span style="float: left">
-    <a href="12-bonus-deploy-operator-to-kubernetes/README.md">⬅️ Prev</a>
-  </span>
-  <span style="float: right">
-    <a href="01-setup-environment/README.md">Next ➡️</a>
-  </span>
-</div>
+<a href="12-bonus-deploy-operator-to-kubernetes/README.md">⬅️</a> <a href="01-setup-environment/README.md">➡️</a>
