@@ -1,0 +1,12 @@
+apiVersion: kubecon.my.domain/v1beta1
+kind: Website
+metadata:
+  labels:
+    app.kubernetes.io/name: website
+    app.kubernetes.io/instance: website-sample
+    app.kubernetes.io/part-of: demo
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: demo
+  name: website-sample
+spec:
+  # TODO(user): Add fields here
