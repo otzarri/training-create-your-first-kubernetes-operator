@@ -10,7 +10,7 @@ Log lines allow you to understand when the reconcile loop runs. Now it is time t
 
 Since you finished the last challenge, a change has been made to your operator.
 
-Navigate to `controllers/website_controller.go` in your `Code editor` tab and scroll all the way to the bottom. Here you should find a new function called `newDeployment`.
+Navigate to `internal/controller/website_controller.go` in your `Code editor` tab and scroll all the way to the bottom. Here you should find a new function called `newDeployment`.
 
 This new function encapsulates the how to create a customized deployment for your website.
 
@@ -19,7 +19,7 @@ While this function was defined for you, you still need to use it in the Reconci
 
 ## ✍🏾 Creating a deployment in the reconcile loop
 
-This `newDeployment` function can return an error, and the following snippet handles that error. Navigate in the `Code editor` tab to the `controllers/website_controller.go` file. This snippet should be added directly below the log line you edited in the last challenge (around line 73):
+This `newDeployment` function can return an error, and the following snippet handles that error. Navigate in the `Code editor` tab to the `internal/controller/website_controller.go` file. This snippet should be added directly below the log line you edited in the last challenge (around line 73):
 ```
   // Attempt to create the deployment and return error if it fails
   err = r.Client.Create(ctx, newDeployment(customResource.Name, customResource.Namespace, customResource.Spec.ImageTag))
@@ -38,7 +38,7 @@ It is all well and good to tell the operator to create a deployment, but is it a
 
 With this new change, we now need allow the operator to work with deployments. Kubebuilder provides a mechanism to do this through powerful comments, much like those used in the CRD fields.
 
-Look near the top of the `controllers/website_controller.go` file in the `Code editor` tab for comment lines that start with `//+kubebuilder:rbac` (around line 45). Each line describes a single RBAC permission.
+Look near the top of the `internal/controller/website_controller.go` file in the `Code editor` tab for comment lines that start with `//+kubebuilder:rbac` (around line 45). Each line describes a single RBAC permission.
 
 To provide access to work with deployments, you need to add the following permission line:
 ```
