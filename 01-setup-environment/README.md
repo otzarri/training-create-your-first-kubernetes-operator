@@ -114,5 +114,5 @@ This is the configuration of the system used to build this tutorial:
 
 
 <hr>
-<a href="../">⬅️</a>
+<a href="/">⬅️</a>
 <a href="../02-generate-application-scaffolding/">➡️</a>
