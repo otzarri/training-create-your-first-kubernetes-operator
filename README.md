@@ -46,5 +46,5 @@ Chapters:
 
 
 <hr>
-<a href="12-bonus-deploy-operator-to-kubernetes/README.md">⬅️</a>
-<a href="01-setup-environment/README.md">➡️</a>
+<a href="12-bonus-deploy-operator-to-kubernetes/">⬅️</a>
+<a href="01-setup-environment/">➡️</a>

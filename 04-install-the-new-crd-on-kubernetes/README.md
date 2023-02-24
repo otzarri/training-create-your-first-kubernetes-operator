@@ -68,5 +68,5 @@ Soon you will request an instance (or Custom Resource) from this definition. But
 
 
 <hr>
-<a href="../03-generate-a-new-operator-and-custom-resource/README.md">⬅️</a>
-<a href="../05-understand-the-new-operator-by-adding-logs/README.md">➡️</a>
+<a href="../03-generate-a-new-operator-and-custom-resource/">⬅️</a>
+<a href="../05-understand-the-new-operator-by-adding-logs/">➡️</a>

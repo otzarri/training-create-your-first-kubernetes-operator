@@ -2,5 +2,5 @@
 
 
 <hr>
-<a href="../10-update-the-deployment-when-imagetag-changes/README.md">⬅️</a>
-<a href="../12-bonus-deploy-operator-to-kubernetes/README.md">➡️</a>
+<a href="../10-update-the-deployment-when-imagetag-changes/">⬅️</a>
+<a href="../12-bonus-deploy-operator-to-kubernetes/">➡️</a>

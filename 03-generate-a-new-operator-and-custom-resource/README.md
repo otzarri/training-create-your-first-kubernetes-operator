@@ -50,5 +50,5 @@ Next up, you will explore these two components in more detail.
 
 
 <hr>
-<a href="../02-generate-application-scaffolding/README.md">⬅️</a>
-<a href="../04-install-the-new-crd-on-kubernetes/README.md">➡️</a>
+<a href="../02-generate-application-scaffolding/">⬅️</a>
+<a href="../04-install-the-new-crd-on-kubernetes/">➡️</a>

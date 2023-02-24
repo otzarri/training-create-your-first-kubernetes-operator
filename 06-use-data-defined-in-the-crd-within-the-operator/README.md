@@ -2,5 +2,5 @@
 
 
 <hr>
-<a href="../05-understand-the-new-operator-by-adding-logs/README.md">⬅️</a>
-<a href="../07-deploy-your-website-from-the-operator/README.md">➡️</a>
+<a href="../05-understand-the-new-operator-by-adding-logs/">⬅️</a>
+<a href="../07-deploy-your-website-from-the-operator/">➡️</a>

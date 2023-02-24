@@ -2,5 +2,5 @@
 
 
 <hr>
-<a href="../11-delete-a-website-deployment/README.md">⬅️</a>
-<a href="../README.md">➡️</a>
+<a href="../11-delete-a-website-deployment/">⬅️</a>
+<a href="../">➡️</a>
