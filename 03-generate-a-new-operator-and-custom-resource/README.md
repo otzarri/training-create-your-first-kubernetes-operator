@@ -50,11 +50,5 @@ Next up, you will explore these two components in more detail.
 
 
 <hr>
-<div style="font-weight: bold; ">
-  <span style="float: left">
-    <a href="../02-generate-application-scaffolding/README.md">⬅️ Prev</a>
-  </span>
-  <span style="float: right">
-    <a href="../04-install-the-new-crd-on-kubernetes/README.md">Next ➡️</a>
-  </span>
-</div>
+<a href="../02-generate-application-scaffolding/README.md">⬅️</a>
+<a href="../04-install-the-new-crd-on-kubernetes/README.md">➡️</a>

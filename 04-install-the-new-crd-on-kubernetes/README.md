@@ -68,11 +68,5 @@ Soon you will request an instance (or Custom Resource) from this definition. But
 
 
 <hr>
-<div style="font-weight: bold; ">
-  <span style="float: left">
-    <a href="../03-generate-a-new-operator-and-custom-resource/README.md">⬅️ Prev</a>
-  </span>
-  <span style="float: right">
-    <a href="../05-understand-the-new-operator-by-adding-logs/README.md">Next ➡️</a>
-  </span>
-</div>
+<a href="../03-generate-a-new-operator-and-custom-resource/README.md">⬅️</a>
+<a href="../05-understand-the-new-operator-by-adding-logs/README.md">➡️</a>

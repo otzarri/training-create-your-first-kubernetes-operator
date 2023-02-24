@@ -114,11 +114,5 @@ This is the configuration of the system used to build this tutorial:
 
 
 <hr>
-<div style="font-weight: bold; ">
-  <span style="float: left">
-    <a href="../README.md">⬅️ Prev</a>
-  </span>
-  <span style="float: right">
-    <a href="../02-generate-application-scaffolding/README.md">Next ➡️</a>
-  </span>
-</div>
+<a href="../README.md">⬅️</a>
+<a href="../02-generate-application-scaffolding/README.md">➡️</a>

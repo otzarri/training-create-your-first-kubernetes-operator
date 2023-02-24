@@ -122,11 +122,5 @@ You need a way to define and run your core business logic as an operator. Using 
 
 
 <hr>
-<div style="font-weight: bold; ">
-  <span style="float: left">
-    <a href="../01-setup-environment/README.md">⬅️ Prev</a>
-  </span>
-  <span style="float: right">
-    <a href="../03-generate-a-new-operator-and-custom-resource/README.md">Next ➡️</a>
-  </span>
-</div>
+<a href="../01-setup-environment/README.md">⬅️</a>
+<a href="../03-generate-a-new-operator-and-custom-resource/README.md">➡️</a>
