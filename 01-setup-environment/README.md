@@ -6,7 +6,6 @@ Before beginning this tutorial it is necessary that you have installed the tools
 * Install the required tools
 * Create a local kubernetes cluster
 
-
 ## 🐿️ Install the Go language
 
 Go is a general-purpose programming language, so you can write any operator logic you want. Kubernetes itself is written in Go, so this language interacts smoothly with Kubernetes API.
@@ -15,7 +14,7 @@ You can chose between installing Go using the package manager of your operating 
 
 Install `gvm` with the command below. If you are using bash just change `zsh` with `bash`.
 
-```shell
+```
 zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 source ~/.gvm/scripts/gvm
 ```
@@ -27,18 +26,16 @@ gvm install go1.19
 gvm use go1.19 --default
 ```
 
-
 ## 🖵 Install kubectl
 
 Kubernetes provides a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API. This tool is named `kubectl`. For configuration, `kubectl` looks for a file named config in the $HOME/.kube directory. You can specify other kubeconfig files by setting the `KUBECONFIG` environment variable or by setting the `--kubeconfig` flag.
 
 To install `kubectl`:
 
-```shell
+```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
-
 
 ## 🏗️ Install kubebuilder
 
@@ -46,7 +43,7 @@ Kubebuilder is an SDK for rapidly building and publishing Kubernetes APIs in Go.
 
 To install `kubebuilder`:
 
-```shell
+```
 curl -L -o kubebuilder https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH)
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubebuilder
 ```
@@ -57,14 +54,13 @@ Docker is a tool that is used to automate the deployment of applications in ligh
 
 Follow the [Docker installation instructions](https://docs.docker.com/engine/install/) for your OS and install it.
 
-
 ## 🍾 Install kind
 
 [kind](https://kind.sigs.k8s.io/) is a tool for running local Kubernetes clusters using Docker container "nodes", bootstraping each “node” with [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/). It was primarily designed for testing Kubernetes itself, but may be used for local development or CI. It's lightweight and easy to integrate in the development workflows.
 
 Run the command below to install `kind`.
 
-```shell
+```
 go install sigs.k8s.io/kind@v0.17.0
 ```
 
@@ -74,13 +70,13 @@ You need a running Kubernetes cluster to develop the operator. Let's deploy a si
 
 Use this command to create the cluster:
 
-```shell
+```
 kind create cluster
 ```
 
 Configure `kubectl` to use this cluster:
 
-```shell
+```
 kubectl cluster-info --context kind-kind
 ```
 
@@ -96,7 +92,6 @@ Additionally, you can see the Docker container running the kubernetes node. The 
 docker ps 
 ```
 
-
 ## ⚙️ System configuration
 
 This is the configuration of the system used to build this tutorial:
@@ -110,7 +105,6 @@ This is the configuration of the system used to build this tutorial:
 | Go version   | 1.19                   |
 | kubebuilder  | 3.9.0                  |
 | kubectl      | 1.25.3                 |
-
 
 <hr>
 <a href="../../../">⬅️</a>

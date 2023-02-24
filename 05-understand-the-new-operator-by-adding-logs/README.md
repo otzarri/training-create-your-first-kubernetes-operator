@@ -9,7 +9,6 @@ Now it is time to understand the generated operator. You will get to see your ap
 * Run the application locally
 * Request a Website custom resource and view the corresponding  logs
 
-
 ## 🕵️ Understanding your new operator
 
 When you selected to create a operator along with the Resource, Kubebuilder took care of some key setup:
@@ -30,9 +29,9 @@ if err = (&controllers.WebsiteReconciler{
 }
 ```
 
-This is a call to the function `SetupWithManager(mgr)`  defined in the file `controllers/website_controller.go`.
+This is a call to the function `SetupWithManager(mgr)` defined in the file `internal/controller/website_controller.go`.
 
-Navigate to `controllers/website_controller.go:58` to view this function. It is already configured to know about the CRD `kubeconv1beta1.Website` that you explored in the last challenge. This is an example of why defining the custom resource in Golang is so helpful.
+Navigate to `internal/controller/website_controller.go:58` to view this function. It is already configured to know about the CRD `kubeconv1beta1.Website` that you explored in the last challenge. This is an example of why defining the custom resource in Golang is so helpful.
 
 Finally, look a bit further up in that same `website_controller.go` file to see the `func (r *WebsiteReconciler) Reconcile` function. This is nearly empty and is where you will add the core of your business logic.
 
@@ -99,7 +98,6 @@ INFO    Starting workers        {"controller": "website", "controllerGroup": "ku
 
 This is the starting of the operator process. You have not yet seen the log line since `Reconcile` will only run and print the log line when a `Website` Resource event occurs.
 
-
 ## 👀 Request a new Website
 
 In the `K8s Shell` tab, request a Custom Resource of type `Website` using the Kubebuilder generated sample file. To see this file, look in the `Code editor` tab under `./config/samples/kubecon_v1beta1_website.yaml`.
@@ -121,13 +119,11 @@ Any time you interact with your Website resources a new event triggers. And each
 
 > 💡You are welcome to play with the resource now. But in order to progress, have one (and only one) Website resource in your cluster before pressing the `Check` button. This will set you up for success on future challenges.
 
-
 ## 📕 Summary
 
 Congratulations, you have triggered a Website reconciliation by requesting a Website resource!
 
 Next up, you will look at how to change the CRD fields and use these custom fields in your operator reconciliation.
-
 
 <hr>
 <a href="../04-install-the-new-crd-on-kubernetes/">⬅️</a>

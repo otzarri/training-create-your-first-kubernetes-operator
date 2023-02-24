@@ -7,7 +7,6 @@ In the previous challenge you created a operator and resource definition (CRD). 
 * Transform the code CRD into YAML and install it in Kubernetes
 * Install the CRD using the provided `make` command
 
-
 ## 🧬 Viewing the generated CRD code
 
 In the last step you selected to generate a custom Resource. This adds a Golang representation of a Custom Resource Definition (CRD) to your operator scaffolding code.
@@ -23,7 +22,6 @@ Have a look in the document `api/v1beta1/website_types.go` for the `type Website
 This as the code definition of the Kubernetes object `spec`. This spec contains a field named `foo` which is defined in `api/v1beta1/website_types.go:32`. There is even a helpful comment above the field describing the use of `foo`.
 
 The CRD is defined first in Golang so that the operator (also written in Golang) can reference the definition. You will see this benefit in the next challenge.
-
 
 ## 👩🏾‍💻 Creating a YAML version
 
@@ -46,7 +44,6 @@ In particular, `config` > `crd` > `bases` > `kubecon.my.domain_websites.yaml:37`
 
 Now it is time to actually put this CRD into your Kubernetes cluster.
 
-
 ## 🚀 Installing the CRD into your Kubernetes cluster
 
 The generated YAML is actually part of a larger collection defined in [Kustomize](https://kustomize.io/). This means that the YAML files are templated with other files before installing in the cluster. Kubebuilder provides a single make target that templates the final YAML files and applies them to the Kubernetes cluster.
@@ -67,13 +64,11 @@ make install
 
 If you `kubectl get crds` again, you will see the `websites.kubecon.my.domain` listed at the bottom of the list.
 
-
 ## 📕 Summary
 
 You have successfully installed a new Custom Resource Definition onto your Kubernetes cluster!
 
 Soon you will request an instance (or Custom Resource) from this definition. But first, you will get to dig into the operator that you created alongside this CRD.
-
 
 <hr>
 <a href="../03-generate-a-new-operator-and-custom-resource/">⬅️</a>

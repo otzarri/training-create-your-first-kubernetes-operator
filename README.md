@@ -2,7 +2,6 @@
 
 Tutorial to learn the basics about creating a Kubernetes operator.
 
-
 ## ❤️ Recognition
 
 Most of the content is copied from the work done by [Abby Bangser](https://hachyderm.io/@abangser) for [this talk](https://www.youtube.com/watch?v=fDkoxrz7BXw):
@@ -15,7 +14,6 @@ Most of the content is copied from the work done by [Abby Bangser](https://hachy
 I found this tutorial quite helpful so I wanted to document it here.
 
 As the original work is licensed under the MIT license, I'll use the same [license](LICENSE.md) for this repository.
-
 
 ## 🐾 Tutorial
 
@@ -43,7 +41,6 @@ Chapters:
 1. [Update the deployment when imagetag changes](10-update-the-deployment-when-imagetag-changes)
 1. [Delete a website deployment](11-delete-a-website-deployment)
 1. [Bonus: Deploy operator to kubernetes](12-bonus-deploy-operator-to-kubernetes)
-
 
 <hr>
 <a href="12-bonus-deploy-operator-to-kubernetes/">⬅️</a>

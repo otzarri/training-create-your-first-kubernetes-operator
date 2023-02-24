@@ -6,7 +6,6 @@ Kubebuilder has generated a Golang application, but it is time to now build your
 * Be introduced to the example business case
 * Create a operator and custom resource (CRD) using Kubebuilder
 
-
 ## ☑️ Dreaming of a better to-do app
 
 So you have a working Golang application. Now it is time to add some business logic to create a useful (albeit, simple) operator.
@@ -42,6 +41,7 @@ kubebuilder create api \
   --resource true \
   --controller true
 ```
+
 The next two challenges will dive into what these two items actually create in your code base and how they work together to operate your to-do application.
 
 ## 📕 Summary
@@ -54,7 +54,6 @@ At this stage, Kubebuilder has wired up two key components for your operator:
 2. A Controller that runs each time a `Website` CRD is create, changed, or deleted.
 
 Next up, you will explore these two components in more detail.
-
 
 <hr>
 <a href="../02-generate-application-scaffolding/">⬅️</a>

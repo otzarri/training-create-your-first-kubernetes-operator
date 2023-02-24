@@ -41,6 +41,7 @@ type WebsiteReconciler struct {
 //+kubebuilder:rbac:groups=kubecon.my.domain,resources=websites/status,verbs=get;update;patch
 //+kubebuilder:rbac:groups=kubecon.my.domain,resources=websites/finalizers,verbs=update
 
+//+kubebuilder:rbac:groups=apps,resources=deployments,verbs=get;list;watch;create;update;patch;delete
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.
@@ -69,6 +70,13 @@ func (r *WebsiteReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ct
 
 	// Use the `ImageTag` field from the website spec to personalise the log
 	log.Info(fmt.Sprintf(`Hello from your new website reconciler "%s"!`, customResource.Spec.ImageTag))
+
+	// Attempt to create the deployment and return error if it fails
+	err = r.Client.Create(ctx, newDeployment(customResource.Name, customResource.Namespace, customResource.Spec.ImageTag))
+	if err != nil {
+		log.Error(err, fmt.Sprintf(`Failed to create deployment for website "%s"`, customResource.Name))
+		return ctrl.Result{}, err
+	}
 
 	return ctrl.Result{}, nil
 }
@@ -120,4 +128,26 @@ func newDeployment(name, namespace, imageTag string) *appsv1.Deployment {
 			},
 		},
 	}
+}
+
+// Create a service with the correct field values. By creating this in a function,
+// it can be reused by all lifecycle functions (create, update, delete).
+func newService(name, namespace string) *corev1.Service {
+  return &corev1.Service{
+    ObjectMeta: metav1.ObjectMeta{
+      Name:      name,
+      Namespace: namespace,
+      Labels:    setResourceLabels(name),
+    },
+    Spec: corev1.ServiceSpec{
+      Ports: []corev1.ServicePort{
+        {
+          Port:     80,
+          NodePort: 31000,
+        },
+      },
+      Selector: setResourceLabels(name),
+      Type:     corev1.ServiceTypeNodePort,
+    },
+  }
 }

@@ -10,7 +10,6 @@ Now it is time to customize the Website CRD and use the custom data as a part of
 * Reference the CRD field in the operator
 * Run the updated operator to test local changes
 
-
 ## 🆙 Updating the CRD fields
 
 Earlier you looked at the Golang representation of the CRD. Return to the `Code editor` tab and view this file again by navigating to `api/v1beta1/website_types.go`.
@@ -57,6 +56,7 @@ Now move to the `K8s Shell` tab and rerun:
 ```
 make install
 ```
+
 Once this command has completed, return to the `Run Shell` tab. Any updates append to the list, so you should now see a second line in the shell that looks like:
 
 ```
@@ -84,7 +84,6 @@ kubectl get crd websites.kubecon.my.domain --output jsonpath="{.spec.versions[0]
 This is the same required list that you saw in yaml.
 
 > 💡 These kubectl commands are using the built-in `jsonpath` output format to simplify the details displayed for the object and then are using [jq](https://stedolan.github.io/jq/) to make the formatting easier to read.
-
 
 ## 👯‍♂️ Using this field in the operator
 
@@ -129,11 +128,9 @@ INFO    Hello from your new website reconciler "latest"! ...
 
 > 💡 If you want to test the validation, try and create a patch with an imageTag that does not match the set requirements of only `-`, lower case alphabet, or digits. The patch should result in an error and the change not applied.
 
-
 ## 📕 Summary
 
 Fantastic! You now have a operator application that not only responds to when a custom resource is added, changed, or deleted but actually uses details from the custom resource in its logic.
-
 
 <hr>
 <a href="../05-understand-the-new-operator-by-adding-logs/">⬅️</a>
