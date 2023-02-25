@@ -5,6 +5,7 @@ You have seen how requesting a custom resource of type Website can trigger the o
 Now it is time to customize the Website CRD and use the custom data as a part of the CRD spec.
 
 **In this challenge you will:**
+
 * Introduce a new CRD field
 * Reinstall the now updated CRD into Kubernetes
 * Reference the CRD field in the operator
@@ -111,6 +112,8 @@ INFO    Hello from your new website reconciler ""! ...
 ```
 
 This is because your Website resource does not have an `imageTag` set. To fix this, you will need to edit the existing website request to include an `imageTag`. To edit your website custom resource to set the `imageTag` field to `latest` use the `K8s Shell` tab to run:
+
+> 💡 There is a new file called [kubecon_v1beta1_website-with-image-tag.yaml](config/samples/kubecon_v1beta1_website-with-image-tag.yaml) which defines the CRD for `Website` and also includes the `imageTag` field. This way you don't have to create a new `Website` and apply ths patch each time you create it.
 
 ```
 kubectl patch \

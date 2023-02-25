@@ -5,13 +5,10 @@ The whole value of an operator is to codify the operations for your applications
 In the last section you identified a possible update scenario. Now you will codify when and how to update the deployment and service.
 
 **In this challenge you will:**
-  * Check the Website custom resource `imageTag` value
-  * Check the deployment container tag
-  * Use the reconcile function to keep the deployment tag aligned with the custom resource field value tabs:
 
-<hr>
-<a href="../09-gracefully-detect-an-update-request/">⬅️</a>
-<a href="../11-delete-a-website-deployment/">➡️</a>
+* Check the Website custom resource `imageTag` value
+* Check the deployment container tag
+* Use the reconcile function to keep the deployment tag aligned with the custom resource field value tabs:
 
 ## 📬 Completing your `TODO` item
 
@@ -148,3 +145,7 @@ In the future, you may add a new field to the `Website` custom resource that req
 You have now not only identified the need to update, but actually codified a safe, targeted application update!
 
 Next you will introduce the final set of functionality for your operator.
+
+<hr>
+<a href="../09-gracefully-detect-an-update-request/">⬅️</a>
+<a href="../11-delete-a-website-deployment/">➡️</a>

@@ -3,6 +3,7 @@
 Create Read Update and Delete (CRUD) is considered basic functionality for most applications, and an operator is no different. So far you have **created**, handled a simple tag **update** and now it is time to implement **delete**.
 
 **In this challenge you will:**
+
 * Detect the deletion of a website
 * Delete any resources the operator creates when its resource is deleted
 

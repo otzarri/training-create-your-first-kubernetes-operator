@@ -5,6 +5,7 @@ Deploying your website for the first time is very exciting! After an initial lau
 While you have launched your website,  you are now blocked. You get an error any time you update your website since the operator can not re-create a deployment using the initial command.
 
 **In this challenge you will:**
+
 * Detect an update scenario by catching a specific error
 * Understand more about what logic needs to live in this error catch
 
@@ -13,6 +14,7 @@ While you have launched your website,  you are now blocked. You get an error any
 Right now, your operator will try to create two new resources each time it reconciles, a deployment and a service. But this is not always necessary!
 
 The reconcile loop runs under a few scenarios:
+
 1. On operator start / restart
 1. Periodically (by default this is daily)
 1. Each time a Website resource event happens

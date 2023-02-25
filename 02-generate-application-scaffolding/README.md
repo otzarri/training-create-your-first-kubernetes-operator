@@ -3,6 +3,7 @@
 Now that you prepared the environment, it is time to get started with `kubebuilder`.
 
 **In this challenge you will:**
+
 * Initialize Kubebuilder
 * Run the generated operator application locally
 
@@ -49,10 +50,12 @@ make help
 ```
 
 Within this help output, take a look for the descriptions of the four targets you will use most today:
+
 * `install`
 * `run`
 
 Then in the bonus challenges you may also touch on:
+
 * `docker-build`
 * `deploy`
 * `test`

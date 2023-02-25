@@ -3,6 +3,7 @@
 Log lines allow you to understand when the reconcile loop runs. Now it is time to use your operator to actually operate an application.
 
 **In this challenge you will:**
+
 * Create a deployment to run your website whenever the operator reconciles
 
 ## 🕵🏿 Some new setup to review
