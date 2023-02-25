@@ -67,7 +67,13 @@ See this service by running the following command in your `K8s Shell` tab ✨:
 kubectl get service --selector=type=Website
 ```
 
-More excitingly, view the website now in the new `Website` tab next to your `Code editor` tab.
+More excitingly, view the website in your default browser running the following commands:
+
+```
+ip=$(kubectl get nodes --selector=node-role.kubernetes.io/control-plane -o jsonpath='{$.items[*].status.addresses[?(@.type=="InternalIP")].address}')
+port=$(kubectl get service --selector=type=Website -o jsonpath='{$.items[*].spec.ports[*].nodePort}')
+xdg-open "http://${ip}:${port}"
+```
 
 ## 📕 Summary
 

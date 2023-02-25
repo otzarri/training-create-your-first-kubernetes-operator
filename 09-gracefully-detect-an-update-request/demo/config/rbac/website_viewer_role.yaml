@@ -1,0 +1,27 @@
+# permissions for end users to view websites.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: website-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: demo
+    app.kubernetes.io/part-of: demo
+    app.kubernetes.io/managed-by: kustomize
+  name: website-viewer-role
+rules:
+- apiGroups:
+  - kubecon.my.domain
+  resources:
+  - websites
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - kubecon.my.domain
+  resources:
+  - websites/status
+  verbs:
+  - get
