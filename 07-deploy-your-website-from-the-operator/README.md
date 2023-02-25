@@ -9,7 +9,7 @@ Log lines allow you to understand when the reconcile loop runs. Now it is time t
 
 Since you finished the last challenge, a change has been made to your operator.
 
-Navigate to `internal/controller/website_controller.go` in your `Code editor` tab and scroll all the way to the bottom. Here you should find a new function called `newDeployment`.
+Navigate to [internal/controller/website_controller.go](demo/internal/controller/website_controller.go) in your `Code editor` tab and scroll all the way to the bottom. Here you should find a new function called `newDeployment`.
 
 This new function encapsulates the how to create a customized deployment for your website.
 

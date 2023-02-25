@@ -10,7 +10,7 @@ A website is only fun if it is visible! It is time to expose your to-do applicat
 
 Once again, a small helper function has been added to your operator between challenges.
 
-Navigate to `internal/controller/website_controller.go` in your `Code editor` tab and scroll all the way to the bottom. Here you should find a new function called `newService`.
+Navigate to [internal/controller/website_controller.go](demo/internal/controller/website_controller.go) in your `Code editor` tab and scroll all the way to the bottom. Here you should find a new function called `newService`.
 
 This function encapsulates how to create a customized service for your website.
 
