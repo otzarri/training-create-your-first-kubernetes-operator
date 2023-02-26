@@ -7,6 +7,12 @@ Before beginning this tutorial it is necessary that you have installed the tools
 * Install the required tools
 * Create a local kubernetes cluster
 
+## 🐋 Install Docker
+
+Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments. `Kind` will create here the nodes for the Kubernetes clusters.
+
+Follow the [Docker installation instructions](https://docs.docker.com/engine/install/) for your OS and install it.
+
 ## 🐿️ Install the Go language
 
 Go is a general-purpose programming language, so you can write any operator logic you want. Kubernetes itself is written in Go, so this language interacts smoothly with Kubernetes API.
@@ -27,15 +33,33 @@ gvm install go1.19
 gvm use go1.19 --default
 ```
 
-## 🖵 Install kubectl
+## 📦 Install arkade
+
+Arkade defines itself as the open source marketplace for Kubernetes and the way developers install the latest versions of their favourite tools and Kubernetes apps. With arkade get, you'll have kubectl, kind, terraform, and jq on your machine faster than you can type apt-get install/brew update. With over 100 CLIs and 55 Kubernetes apps (charts, manifests, installers) available for Kubernetes, gone are the days of contending with dozens of README files just to set up a development stack with the usual suspects like ingress-nginx, Postgres and cert-manager.
+
+You will use arkade to install some dependencies in this tutorial. Install it running the command below:
+
+```
+curl -sLS https://get.arkade.dev | sudo sh
+```
+
+Add arkade binary directory to your PATH variable:
+
+```
+echo '
+# Arkade support
+[ -d "$HOME/.arkade/bin" ] && PATH="$HOME/.arkade/bin:$PATH"
+' > $HOME/.zshrc
+```
+
+## 🖵  Install kubectl
 
 Kubernetes provides a command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API. This tool is named `kubectl`. For configuration, `kubectl` looks for a file named config in the $HOME/.kube directory. You can specify other kubeconfig files by setting the `KUBECONFIG` environment variable or by setting the `--kubeconfig` flag.
 
 To install `kubectl`:
 
 ```
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+arkade get kubectl
 ```
 
 ## 🏗️ Install kubebuilder
@@ -45,24 +69,17 @@ Kubebuilder is an SDK for rapidly building and publishing Kubernetes APIs in Go.
 To install `kubebuilder`:
 
 ```
-curl -L -o kubebuilder https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH)
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubebuilder
+arkade get kubebuilder
 ```
 
-## 🐋 Install Docker
-
-Docker is a tool that is used to automate the deployment of applications in lightweight containers so that applications can work efficiently in different environments. `Kind` will create here the nodes for the Kubernetes clusters.
-
-Follow the [Docker installation instructions](https://docs.docker.com/engine/install/) for your OS and install it.
-
-## 🍾 Install kind
+## 🍶 Install kind
 
 [kind](https://kind.sigs.k8s.io/) is a tool for running local Kubernetes clusters using Docker container "nodes", bootstraping each “node” with [kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/). It was primarily designed for testing Kubernetes itself, but may be used for local development or CI. It's lightweight and easy to integrate in the development workflows.
 
 Run the command below to install `kind`.
 
 ```
-go install sigs.k8s.io/kind@v0.17.0
+arkade get kind
 ```
 
 ## ⎈ Create a single-node local Kubernetes cluster
