@@ -9,7 +9,7 @@ Most of the content is copied from the work done by [Abby Bangser](https://hachy
 * The [slides of the talk](https://static.sched.com/hosted_files/kccncna2022/52/Tutorial%20Becoming%20a%20Kubernetes%20Developer_%20Writing%20Your%20First%20Operator.pdf).
 * The [online tutorial](https://abangser.gitbook.io/kubecon2022/content/online-tutorial).
 * The [instruqt track](https://play.instruqt.com/syntasso/invite/oqyqsyhwlzyi) of the online tutorial.
-* The [source code](https://play.instruqt.com/syntasso/invite/oqyqsyhwlzyi) of the instruqt track.
+* The [source code](https://github.com/syntasso/instruqt-kubecon/tree/main/track) of the instruqt track.
 
 I found this tutorial quite helpful so I wanted to document it here.
 
